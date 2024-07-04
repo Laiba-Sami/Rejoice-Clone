@@ -1,0 +1,458 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Mulish';
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+.cursor{
+    height: 6.5vw;
+    width: 6.5vw;
+    background-color: #ff5f38;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%,-50%);
+}
+.cursor h5{
+    font-size: 1.1vw;
+    text-transform: capitalize;
+    font-weight: 300;
+    color: #fff;
+    opacity: 1;
+}
+#loader{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#loader h2{
+    text-transform: capitalize;
+    margin-left: 1vw;
+    font-weight: 400;
+}
+
+#page1{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+#page1 video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+#content{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    color: #fff;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vw 4vw;
+    text-transform: capitalize;
+    font-size: 1.2vw;
+}
+nav h3{
+    font-weight: 300;
+    letter-spacing: 1;
+}
+nav a{
+    text-decoration: none;
+    color: #fff;
+}
+#page1 h1{
+    padding: 0 3vw;
+    padding-top: 27vw;
+    font-size: 19vw;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: "Ubuntu";
+}
+h1 span{
+    font-family: "Ubuntu";
+    display: inline-block;
+}
+#page2{
+    height: 84vh;
+    width: 100%;
+    padding: 5vw 3vw;
+    background-color: rgb(251, 246, 240);
+}
+#page2 .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.head h1{
+    text-transform: capitalize;
+    letter-spacing: 1;
+    font-size: 1.8vw;
+    font-weight: 300;
+    margin-bottom: 1vw;
+}
+.head sup{
+    font-size: 1vw;
+}
+hr{
+    opacity: 0.4;
+}
+.mpara p{
+    width: 95%;
+    font-size: 4vw;
+    text-align: left;
+    letter-spacing: -0.1vw;
+    margin-top: 1vw;
+    font-weight: 500;
+    text-indent: 7vw;
+}
+.mfoot{
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+.mfoot button{
+    margin: 0 0.5vw;
+    border-radius: 5vw;
+    width: 4.5vw;
+    background-color: black;
+    color: #fff;
+}
+.mfooter .footp{
+    padding: 2.5vw 15vw;
+    text-decoration: underline;
+    font-size: 4.5vw;
+    text-align: center;
+    font-weight: 300;
+}
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    padding: 2vw;
+    background-color: rgb(251, 246, 240);
+}
+#page3elem{
+    height: 72vh;
+    width: 100%;
+    padding: 1vw 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#page3elem .img{
+    height: 100%;
+    width: 32%;
+    position: relative;
+    overflow: hidden;
+}
+#page3elem .img video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    top: 0;
+    left: 0;
+}
+#page3elem .img img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all linear 0.8s;
+}
+#page3elem .img:hover img{
+    opacity: 0;
+}
+
+#page3heading{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3vw;
+    margin-top: 12vw;
+}
+#page3heading h2{
+    font-weight: 300;
+}
+#page4{
+    min-height: 100vh;
+    width: 100%;
+    padding: 5vw 3vw;
+    background-color: rgb(251, 246, 240);
+}
+.head1 h1{
+    text-transform: capitalize;
+    letter-spacing: 1;
+    line-height: 1vw;
+    font-size: 1.8vw;
+    font-weight: 300;
+    margin-bottom: 1vw;
+}
+#page4 p{
+    line-height: 1.3;
+}
+#page5{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(251, 246, 240); 
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.glowcircle{
+    height: 40vw;
+    width: 40vw;
+    border-radius: 50%;
+    background: linear-gradient(to top left, rgb(70, 156, 227), #e64201);
+    animation: glowAnimation 10s linear infinite ,expandContract 5s ease-in-out infinite; 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.glowcircle svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+}
+
+.glowcircle svg circle {
+    transition: all 2.8s ease-out;
+}
+#page5 .glowcircle .seats{
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+    color: #fff;
+}
+#page5 .glowcircle .seats h2{
+    font-size: 4vw;
+    font-weight: 100;  
+}
+#page5 .glowcircle .seats h5{
+    font-size: 2vw;
+    font-weight: 100;  
+}
+#page6{
+    height: 100vh;
+    width: 100%;
+    padding: 5vw 3vw;
+    background-color: rgb(251, 246, 240);
+}
+#page7{
+    height: 100vh;
+    width: 100%;
+    padding: 4vw 0;
+    background-color: rgb(251, 246, 240);
+    position: relative;
+}
+#page7 #pagetop{
+    display: flex;
+    justify-content: space-between;
+}
+#page7 #pagetop h1{
+    font-size: 8vw;
+    font-weight: 500;
+    margin-left: 3vw;
+}
+#page7 #pagetop h2{
+    font-size: 1.9vw;
+    font-weight: 300;
+    padding-top: 6.5vw;
+    margin-right: 3vw;
+    text-transform: capitalize;
+}
+hr{
+    margin:0 3vw;
+    opacity: 0.7;
+}
+.swiperrr{
+    height: 25vw;
+    width: 100%;
+    position: relative;
+    margin-top: -5%;
+    /* background-color: red; */
+}
+.swiper {
+    width: 120%;
+    height: 100%;
+  }
+
+.swiper-slide {
+    width: 23vw;
+    text-align: center;
+    font-size: 18px;
+    /* background-color: #b43312; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.swiper-slide img {
+    /* display: block; */
+    width: 19%;
+    object-fit: cover;
+    
+}
+
+.swiper {
+    margin-left: auto;
+    margin-right: auto;
+}
+#page8{
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items:flex-start ;
+    justify-content: center;
+    background-color: rgb(251, 246, 240);
+}
+#page8 h2{
+    font-size: 4.5vw;
+    font-weight: 400;
+    text-decoration: underline
+}
+#page8 p{
+    padding-left: 3.3vw;
+    font-weight: 300;
+    padding-bottom: 0.2vw;
+}
+#page9{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(18, 18, 18);
+    color: white;
+}
+#page9top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vw 3vw;
+    padding-bottom: 10vw;
+}
+.topl h3{
+    font-size: 2vw;
+    font-weight: 250;
+    margin-bottom: 2vw;
+}
+.topl button{
+    width: 10vw;
+    padding: 1vw 1vw;
+    font-size: 1.1vw;
+    border-radius: 50vw;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+}
+.topr{
+    height: 30vh;
+    width: 25%;
+    /* background-color: #b43312; */
+    padding-top: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.toprl h5{
+    font-size: 1.2vw;
+    font-weight: 400;
+    margin-bottom: 0.1vw; 
+
+}
+.toprr{
+    width: 30%;
+    padding-right: 2vw;
+    margin-bottom: 4.5vw;
+}
+.toprr a{
+    gap: 10vw;
+    text-decoration: none;
+    color: white;
+}
+#page9mid{
+    height: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:  0 1vw;
+    margin-top: 2vw;
+}
+#page9mid .topm h5{
+    font-size: 1.2vw;
+    font-weight: 300;
+    padding-left: 3vw;
+}
+#page9mid .topr{
+    width: 27%;
+    /* background-color: aqua; */
+}
+#page9mid .toprr h5{
+    font-size: 1vw;
+    padding-top: 4.8vw;
+    /* background-color: #c94625; */
+    width: 100%;
+
+}
+#page9bottom{
+    padding: 0 2vw;
+}
+#page9bottom h1{
+    font-size: 19vw;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: "Ubuntu";
+}
+
+@keyframes glowAnimation {
+    0% {
+        background: linear-gradient(0deg,rgb(70, 156, 227) , #df3207);
+    }
+    25% {
+        background: linear-gradient(90deg, rgb(70, 156, 227),#df3207 );
+    }
+    50% {
+        background: linear-gradient(180deg,rgb(70, 156, 227), #c94625);
+    }
+    75% {
+        background: linear-gradient(270deg, rgb(70, 156, 227), #f13607);
+    }
+    100% {
+        background: linear-gradient(360deg, rgb(70, 156, 227), #b43312);
+    }
+}
+@keyframes expandContract {
+    0%, 100% {
+        height: 36vw;
+        width: 36vw;
+    }
+    50% {
+        height: 40vw;
+        width: 40vw;
+    }
+}
+
